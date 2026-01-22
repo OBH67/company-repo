@@ -11,7 +11,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-950 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-20 md:pt-0 bg-gradient-to-br from-black via-gray-900 to-blue-950 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -20,7 +20,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-6 py-20 lg:py-28">
+      <div className="relative z-10 container mx-auto px-6 py-6 md:py-12 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div
