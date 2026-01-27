@@ -1,10 +1,10 @@
-import Hero from '../components/Hero';
-import Services from '../components/Services';
-import About from '../components/About';
-import Portfolio from '../components/Portfolio';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import Hero from '../components/organisms/Hero';
+import Services from '../components/organisms/Services';
+import About from '../components/organisms/About';
+import Portfolio from '../components/organisms/Portfolio';
+import Contact from '../components/templates/Contact';
+import Footer from '../components/organisms/Footer';
+import Navbar from '../components/organisms/Navbar';
 
 export default function Home() {
   return (

@@ -1,77 +1,13 @@
-'use client';
+"use client";
 
 import { useState } from 'react';
-import Image from 'next/image';
+import { projects, filters } from '../data/projectData';
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('todos');
 
-  const projects = [
-    {
-      id: 1,
-      title: 'E-commerce Fashion',
-      category: 'web',
-      description: 'Tienda online de moda con carrito de compras y pasarela de pago integrada.',
-      image: '/placeholder-project.jpg',
-      tags: ['Next.js', 'Stripe', 'Tailwind'],
-      color: 'from-purple-500 to-pink-500',
-    },
-    {
-      id: 2,
-      title: 'App de Fitness',
-      category: 'mobile',
-      description: 'Aplicación móvil para seguimiento de rutinas y progreso físico.',
-      image: '/placeholder-project.jpg',
-      tags: ['React Native', 'Firebase', 'UI/UX'],
-      color: 'from-green-500 to-emerald-500',
-    },
-    {
-      id: 3,
-      title: 'Dashboard Analytics',
-      category: 'web',
-      description: 'Panel de control con visualización de datos en tiempo real.',
-      image: '/placeholder-project.jpg',
-      tags: ['React', 'Chart.js', 'API'],
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      id: 4,
-      title: 'Restaurante App',
-      category: 'mobile',
-      description: 'App de pedidos online con seguimiento de entregas en tiempo real.',
-      image: '/placeholder-project.jpg',
-      tags: ['Flutter', 'Maps API', 'Firebase'],
-      color: 'from-orange-500 to-red-500',
-    },
-    {
-      id: 5,
-      title: 'Portfolio Creativo',
-      category: 'design',
-      description: 'Sitio web portfolio para artista con galería interactiva.',
-      image: '/placeholder-project.jpg',
-      tags: ['Figma', 'Framer', 'WebGL'],
-      color: 'from-violet-500 to-purple-500',
-    },
-    {
-      id: 6,
-      title: 'Sistema CRM',
-      category: 'web',
-      description: 'Plataforma de gestión de clientes y ventas para empresas.',
-      image: '/placeholder-project.jpg',
-      tags: ['Vue.js', 'Node.js', 'MongoDB'],
-      color: 'from-teal-500 to-cyan-500',
-    },
-  ];
-
-  const filters = [
-    { id: 'todos', label: 'Todos' },
-    { id: 'web', label: 'Web' },
-    { id: 'mobile', label: 'Mobile' },
-    { id: 'design', label: 'Diseño' },
-  ];
-
-  const filteredProjects = activeFilter === 'todos' 
-    ? projects 
+  const filteredProjects = activeFilter === 'todos'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   return (

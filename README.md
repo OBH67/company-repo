@@ -54,6 +54,41 @@ npm start
 - La imagen hero principal está en `public/robot-hero.png`.
 - Si vas a trabajar con n8n u otros servicios externos, agrega la configuración/credenciales en variables de entorno (no subir archivos `.env` al repositorio).
 
+## Servicio de contacto (envío de correos)
+
+Se añadió un endpoint serverless para enviar correos cuando alguien use el formulario de contacto:
+
+- `POST /api/contact` — recibe JSON: `{ name, email, message }`.
+
+Providers soportados:
+- **SendGrid**: configura `SENDGRID_API_KEY` y `CONTACT_EMAIL` (destino). Opcional `FROM_EMAIL` y `FROM_NAME`.
+- **SMTP (fallback)**: configura `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` y `CONTACT_EMAIL`.
+
+Ejemplo con `fetch` desde el cliente:
+
+```js
+await fetch('/api/contact', {
+	method: 'POST',
+	headers: { 'Content-Type': 'application/json' },
+	body: JSON.stringify({ name: 'Juan', email: 'juan@example.com', message: 'Hola!' })
+});
+```
+
+Entorno recomendado en Vercel (Environment Variables):
+
+- `CONTACT_EMAIL` = tu-email@dominio.com
+- `SENDGRID_API_KEY` = <tu_sendgrid_api_key> (opcional si usas SendGrid)
+- `FROM_EMAIL` = no-reply@tudominio.com (opcional)
+
+Si usas SMTP como fallback:
+
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_USER`
+- `SMTP_PASS`
+
+Nota: Si usas nodemailer (SMTP) instala la dependencia en el proyecto: `npm install nodemailer`.
+
 ## Contribuciones
 1. Haz un fork y crea una rama: `feature/tu-cambio`
 2. Añade cambios y commitea: `git add . && git commit -m "feat: descripción"`
