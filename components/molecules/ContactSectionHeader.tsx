@@ -1,7 +1,7 @@
 export default function ContactSectionHeader() {
   return (
-    <div className="text-center mb-16">
-      <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+    <div className="text-center mb-8 sm:mb-12 md:mb-16">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.8)]">
           Contáctanos
         </span>

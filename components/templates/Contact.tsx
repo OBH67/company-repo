@@ -11,11 +11,11 @@ export default function Contact() {
         <div className="absolute bottom-1/3 -right-40 w-96 h-96 bg-teal-600/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-6">
+      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
         <ContactSectionHeader />
-        <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           <LeftContactForm />
-          <div className="space-y-8">
+          <div className="space-y-4 sm:space-y-6 md:space-y-8">
             <RightContactInfo />
             <MapPlaceholder />
           </div>

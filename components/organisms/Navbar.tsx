@@ -22,8 +22,8 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'border-b border-blue-500/20 bg-black/80 shadow-lg shadow-blue-500/10 backdrop-blur-md'
+        scrolled || isMenuOpen
+          ? 'border-b border-blue-500/20 bg-black/95 shadow-lg shadow-blue-500/10 backdrop-blur-md'
           : 'bg-transparent'
       }`}
     >
@@ -115,7 +115,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`overflow-hidden transition-all duration-500 ease-in-out lg:hidden ${
+        className={`overflow-hidden transition-all duration-500 ease-in-out lg:hidden bg-black/95 backdrop-blur-sm border-t border-blue-500/20 z-50 ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

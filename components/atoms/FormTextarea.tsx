@@ -42,7 +42,7 @@ export default function FormTextarea({
         rows={rows}
         placeholder={placeholder}
         required={required}
-        className={`w-full border bg-gray-800/50 px-4 py-3 ${focused ? 'border-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.3)]' : 'border-gray-700'} resize-none rounded-xl text-white placeholder-gray-500 transition-all duration-300 focus:outline-none`}
+        className={`w-full border bg-gray-800/50 px-3 py-2.5 sm:px-4 sm:py-3 ${focused ? 'border-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.3)]' : 'border-gray-700'} resize-none rounded-lg sm:rounded-xl text-sm sm:text-base text-white placeholder-gray-500 transition-all duration-300 focus:outline-none`}
       />
     </div>
   );

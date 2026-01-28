@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-950 pt-20 md:pt-0"
+      className="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-950 pt-20 lg:pt-0"
     >
       <HeroBackground />
 

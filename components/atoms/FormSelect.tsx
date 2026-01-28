@@ -39,7 +39,7 @@ export default function FormSelect({
         onFocus={onFocus}
         onBlur={onBlur}
         required={required}
-        className={`w-full border bg-gray-800/50 px-4 py-3 ${focused ? 'border-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.3)]' : 'border-gray-700'} rounded-xl text-white transition-all duration-300 focus:outline-none`}
+        className={`w-full border bg-gray-800/50 px-3 py-2.5 sm:px-4 sm:py-3 ${focused ? 'border-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.3)]' : 'border-gray-700'} rounded-lg sm:rounded-xl text-sm sm:text-base text-white transition-all duration-300 focus:outline-none`}
       >
         {options.map((opt) => (
           <option key={opt.value} value={opt.value}>
