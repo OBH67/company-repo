@@ -29,22 +29,17 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo with neon effect */}
+          {/* Logo with image */}
           <div className="group flex cursor-pointer items-center">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-lg bg-blue-500 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-70"></div>
-              <div className="relative flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 shadow-lg shadow-blue-500/50 transition-all duration-300 group-hover:shadow-blue-400/70">
-                <span className="text-2xl font-bold text-white drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">
-                  FBT
-                </span>
-              </div>
+            <div className="h-14 w-14 flex-shrink-0">
+              <img src="/logo-no-background.png" alt="Allux Studios" className="h-full w-full object-contain" />
             </div>
             <div className="ml-3">
-              <span className="block text-xl font-bold text-white drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                Frank Brother's
+              <span className="block text-2xl font-bold text-white drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+                ALLUX
               </span>
               <span className="block text-xs text-cyan-400 drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]">
-                Tecnologies
+                STUDIOS
               </span>
             </div>
           </div>
