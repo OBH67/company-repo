@@ -49,7 +49,7 @@ export const projects = [
     title: 'Sistema CRM',
     category: 'web',
     description: 'Plataforma de gestión de clientes y ventas para empresas.',
-    image: '/crm.png',
+    image: '/CRM.png',
     tags: ['Vue.js', 'Node.js', 'MongoDB'],
     color: 'from-teal-500 to-cyan-500',
   },
